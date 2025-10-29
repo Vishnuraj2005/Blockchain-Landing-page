@@ -90,6 +90,7 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     padding-top: 150px;
+    padding-bottom: 50px;
     gap: 60px;
 }
 
@@ -100,33 +101,64 @@ nav {
 /* page3 */
 
 .company {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: black;
-    color: white;
-    padding-top: 100px;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  padding: 50px 0;
+}
+
+.company-slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(250px * 24); 
 }
 
 .brand {
-    border: 2px solid white;
-    /* width: 100px;
-    height: 45px; */
-    width: fit-content;
-    height: 45px;
-    border-radius: 30px;
-    padding: 0 10px;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 0 15px;
+  height: 45px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  white-space: nowrap;
+  min-width: 250px; 
+}
+
+.brand img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Animation keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* page4 */
 
 .dao {
-    display: flex;
+     display: flex;
+    padding-top: 50px;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 100px;
+    padding-top: -100px;
     background-color: black;
     color: white;
 }
@@ -178,6 +210,8 @@ nav {
 
 .nft {
     border: 2px solid lightgray;
+     background-color: darkblue;
+     border-radius: 50px;
     width: 400px;
     height: 300px;
     text-align: center;
@@ -296,10 +330,27 @@ nav {
         padding-left: 70px;
     }
 
-    .company {
-        flex-direction: column;
-        align-items: center;
-    }
+    .slide-track {
+    animation: scroll 40s linear infinite; 
+    width: calc(180px * 24); 
+  }
+
+  .brand {
+    min-width: 180px;
+    height: 40px;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  .brand img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .company {
+    padding: 30px 0;
+  }
+  
 
     .dao {
         flex-direction: column;
