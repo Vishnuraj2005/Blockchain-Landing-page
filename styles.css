@@ -195,6 +195,10 @@ nav {
   gap: 50px;
   padding-top: 100px;
 }
+.seed-img
+{
+  filter: drop-shadow(0 0 30px purple);
+}
 
 /* 3cards */
 
